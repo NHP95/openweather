@@ -1,0 +1,15 @@
+{
+  "env": {
+    "apiKey": "ebdc68771d21e7ade786338e53884bf8",
+    "apiPath": "/data/2.5/weather"
+  },
+  "baseUrl": "http://api.openweathermap.org",
+  "projectId": "shie33",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "results",
+    "html": false,
+    "json": true,
+    "overwrite": false
+  }
+}

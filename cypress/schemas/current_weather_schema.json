@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "coord": {
+            "type": "object",
+            "lon": {
+                "type": "number"
+            },
+            "lat": {
+                "type": "number"
+            }
+        },
+        "weather": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "main": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "icon": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        }
+    }
+}
