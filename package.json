@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cy:debug": "cypress run --env grep='debug'",
     "cy:all": "cypress run --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
     "cy:api": "cypress run --env grep='api' --tag 'api' --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
     "cy:schema": "cypress run --env grep='schema' --tag 'schema' --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
+    "cy:smoke": "cypress run --env grep='smoke' --tag 'smoke' --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
     "k6:benchmark": "CONFIG_FILE=cypress.json k6 run k6/scripts/current_weather_performance.js"
   },
   "author": "",

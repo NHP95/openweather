@@ -1,6 +1,6 @@
 {
   "env": {
-    "apiKey": "ebdc68771d21e7ade786338e53884bf8",
+    "apiKey": "f7abc1b09e8c1ba0d594aa4f6643a1b6",
     "apiPath": "/data/2.5/weather"
   },
   "baseUrl": "http://api.openweathermap.org",

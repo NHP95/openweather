@@ -14,10 +14,10 @@ This repo contains automation and performance source files to test [OpenWeather]
 ### Automation
 * Run `npm run cy:all` to run all the spec files
 * Run `npm run cy:api` to run api tests
+* Run `npm run cy:smoke` to run tests tagged with 'smoke' label
 * Run `npm run cy:schema` to run schema validation tests
 
-The results of each run can be found at [cypress dashboard](https://dashboard.cypress.io/projects/shie33/runs)
-
+The results of each run can be found at [cypress dashboard](https://dashboard.cypress.io/projects/shie33/runs). And the generated report (in .json format) can be found under the `results` folder
 ### Performance
 Run the following command will trigger a test to fire 10 RPS (sending too many requests to the server will return 429 status code - please keep this number low just for testing purposes) in which it has a validation on the 95th percentile to check if the response time is below 1 second, and the error rate is below 0.001%
 

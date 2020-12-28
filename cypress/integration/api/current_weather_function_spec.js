@@ -32,7 +32,7 @@ describe('Get current weather data (api) (smoke)', () => {
         ];
 
         inputs.forEach((input) => {
-            it(`should return correct search results ${input.cityName},${input.stateCode},${input.countryCode}`, () => {
+            it(`(smoke) should return correct search results ${input.cityName},${input.stateCode},${input.countryCode}`, () => {
                 const urlParams = getWeatherByCityNameRequestParams(
                     input.cityName,
                     input.stateCode,
@@ -53,16 +53,16 @@ describe('Get current weather data (api) (smoke)', () => {
             cy.request(buildrequest(urlParams)).as('weather');
             cy.get('@weather').its('body.message').should('be.equal', 'city not found');
         });
-        it('should return city name in the same language', () => {
-            const urlParams = getWeatherByCityNameRequestParams("Hồ Chí Minh")['params'];
+        it('(smoke) should return city name in the same language', () => {
+            const urlParams = getWeatherByCityNameRequestParams("Thành phố Hồ Chí Minh")['params'];
             cy.request(buildrequest(urlParams)).as('weather');
-            cy.get('@weather').its('body.name').should('be.equal', "Hồ Chí Minh");
+            cy.get('@weather').its('body.name').should('be.equal', "Thành phố Hồ Chí Minh");
         });
     });
     context('Using city id', () => {
         const cities = require('../../fixtures/cities.json');
         cities.forEach((city) => {
-            it(`should return correct search results ${city.id}`, () => {
+            it(`(smoke) should return correct search results ${city.id}`, () => {
                 const urlParams = getWeatherByCityIDRequestParams(city.id)['params'];
                 cy.request(buildrequest(urlParams)).as('weather');
                 cy.get('@weather').its('status').should('be.equal', 200);
