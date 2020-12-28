@@ -15,13 +15,15 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-const { JsonSchemaValidation } = require('@jc21/cypress-jsonschema-validation');
 require('module-alias/register');
+const { JsonSchemaValidation } = require('@jc21/cypress-jsonschema-validation');
+const selectTestsWithGrep = require('cypress-select-tests/grep');
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   on('task', JsonSchemaValidation(config));
+  on('file:preprocessor', selectTestsWithGrep(config));
   // ...
   return config;
 }

@@ -2,7 +2,7 @@ import {
     getWeatherByCityNameRequestParams
 } from "../../../builder/current_weather_request_builder.js";
 
-describe('Get current weather data', () => {
+describe('Get current weather data (schema) (smoke)', () => {
     const buildrequest = (urlParams) => {
         return {
             url: `${Cypress.env('apiPath')}?${urlParams}&appid=${Cypress.env('apiKey')}`,

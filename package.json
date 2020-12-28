@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:all": "cypress run --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
+    "cy:api": "cypress run --env grep='api' --tag 'api' --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
+    "cy:schema": "cypress run --env grep='schema' --tag 'schema' --record --key 37fddfb7-c39e-491a-a183-83331b30e816",
+    "k6:benchmark": "CONFIG_FILE=cypress.json k6 run k6/scripts/current_weather_performance.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jc21/cypress-jsonschema-validation": "^0.0.1",
+    "@jc21/cypress-jsonschema-validation": "0.0.1",
     "cypress": "^6.2.0",
+    "cypress-select-tests": "^1.5.9",
     "k6": "0.0.0",
     "mochawesome": "^6.2.1",
     "mochawesome-merge": "^4.2.0",
