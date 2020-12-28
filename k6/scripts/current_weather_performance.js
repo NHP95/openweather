@@ -11,10 +11,10 @@ export let options = {
     scenarios: {
         load_test: {
             executor: 'constant-arrival-rate',
-            rate: 10,
+            rate: 5,
             preAllocatedVUs: 0,
-            duration: '10s',
-            maxVUs: 10
+            duration: '5s',
+            maxVUs: 5
         },
     },
     thresholds: {
