@@ -30,6 +30,63 @@
                 }
             }
         },
+        "main": {
+            "type": "object",
+            "properties": {
+                "temp": {
+                    "type": "number"
+                },
+                "feels_like": {
+                    "type": "number"
+                },
+                "temp_min": {
+                    "type": "number"
+                },
+                "temp_max": {
+                    "type": "number"
+                },
+                "pressure": {
+                    "type": "number"
+                },
+                "humidity": {
+                    "type": "number"
+                }
+            }
+        },
+        "wind": {
+            "type": "object",
+            "properties": {
+                "speed": {
+                    "type": "number"
+                },
+                "deg": {
+                    "type": "number"
+                }
+            }
+        },
+        "sys": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "number"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "message": {
+                    "type": "number"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "sunrise": {
+                    "type": "integer"
+                },
+                "sunset": {
+                    "type": "integer"
+                }
+            }
+        },
         "id": {
             "type": "integer"
         },

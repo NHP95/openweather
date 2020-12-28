@@ -19,7 +19,8 @@ This repo contains automation and performance source files to test [OpenWeather]
 The results of each run can be found at [cypress dashboard](https://dashboard.cypress.io/projects/shie33/runs)
 
 ### Performance
-Run the following command will trigger a test to fire 100 RPS in which it has a validation on the 95th percentile to check if the response time is below 1 second, and the error rate is below 0.001%
+Run the following command will trigger a test to fire 10 RPS (sending too many requests to the server will return 429 status code - please keep this number low just for testing purposes) in which it has a validation on the 95th percentile to check if the response time is below 1 second, and the error rate is below 0.001%
+
 ```
 npm run k6:benchmark
 ```

@@ -53,6 +53,11 @@ describe('Get current weather data (api) (smoke)', () => {
             cy.request(buildrequest(urlParams)).as('weather');
             cy.get('@weather').its('body.message').should('be.equal', 'city not found');
         });
+        it('should return city name in the same language', () => {
+            const urlParams = getWeatherByCityNameRequestParams("Hồ Chí Minh")['params'];
+            cy.request(buildrequest(urlParams)).as('weather');
+            cy.get('@weather').its('body.name').should('be.equal', "Hồ Chí Minh");
+        });
     });
     context('Using city id', () => {
         const cities = require('../../fixtures/cities.json');
