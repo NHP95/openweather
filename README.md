@@ -7,14 +7,15 @@ This repo contains automation and performance source files to test [OpenWeather]
 * Monitoring: Grafana + InfluxDB
 
 ## Installation
-* Install node.js v10.0.0
+* Install node.js > v10.0.0
+* Install `k6`: https://k6.io/docs/getting-started/installation
 * Run `npm install` to install necessary packages
 
 ## Test Execution
 ### Automation
 * Run `npm run cy:all` to run all the spec files
 * Run `npm run cy:api` to run api tests
-* Run `npm run cy:smoke` to run tests tagged with 'smoke' label
+* Run `npm run cy:smoke` to run tests tagged with 'smoke' label (UNIX only)
 * Run `npm run cy:schema` to run schema validation tests
 
 The results of each run can be found at [cypress dashboard](https://dashboard.cypress.io/projects/shie33/runs). And the generated report (in .json format) can be found under the `results` folder
